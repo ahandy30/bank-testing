@@ -1,4 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import path from 'path';
+
+export const STORAGE_STATE = path.join(__dirname, 'playwright/.auth/user.json');
 
 /**
  * Read environment variables from file.
