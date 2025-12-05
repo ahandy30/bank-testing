@@ -12,11 +12,17 @@ jobs:
       with:
         node-version: lts/*
     - name: Install dependencies
-      run: npm ci
+      run : |
+        echo "Install dependencies"
+        npm ci
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: |
+        echo "Install all Playwright Browsers"
+        npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test --workers 1
+      run: |
+        echo "Running Tests, please wait..."
+        npx playwright test --workers 1
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
