@@ -37,7 +37,7 @@ export class TransferFundsPage {
 
     async getSourceAccountId() {
         await this.sourceAccount.waitFor();
-        return await this.destinationAccount.locator('option:checked').textContent();
+        return await this.sourceAccount.locator('option:checked').textContent();
     }
 
     async verifyFundsTransferSuccess(amount: string, fromAcct: string, toAcct: string) {

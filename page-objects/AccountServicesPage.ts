@@ -19,7 +19,7 @@ export class AccountServicesPage {
         this.newAccountMessage = page.locator('#openAccountResult');
     }
 
-    async goTo() {
+    async goToOpenAccount() {
         await this.openAccountLink.click();
     }
 
@@ -27,7 +27,7 @@ export class AccountServicesPage {
         await this.accountTypeSelect.selectOption(accountType);
     }
 
-    async submitAccountForm() {
+    async createAccount() {
         await this.openAccountButton.click({ timeout: 5000 });
     }
 
